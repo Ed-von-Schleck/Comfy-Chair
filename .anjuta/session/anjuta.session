@@ -1,17 +1,20 @@
 
 [Anjuta]
-Geometry=790x575+10+26
-
-[File Loader]
-Files=file:///home/christian/Code/Comfy-Chair/src/main.py#8%%%file:///home/christian/Code/Comfy-Chair/src/mainresthandler.py#1
-
-[Document Manager]
-bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
+Maximized=1
+Geometry=1366x710+0+26
 
 [Project Manager]
 Expand=Comfy-Chair%%%Comfy-Chair//Comfy-Chair
 
+[File Loader]
+Files=file:///home/christian/Code/Comfy-Chair/src/main.py#7%%%file:///home/christian/Code/Comfy-Chair/src/mainresthandler.py#6%%%file:///home/christian/Code/Comfy-Chair/comfychair.py#1
+
+[Document Manager]
+bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
+
 [Execution]
+Program arguments=
+Program uri=file:///home/christian/python
 Run in terminal=2
 Working directories=file:///home/christian/Code/Comfy-Chair
 
