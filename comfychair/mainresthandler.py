@@ -15,11 +15,11 @@ class MainRestHandler(tornado.web.RequestHandler):
 
     @tornado.web.asynchronous
     def get(self, collection, document):
-        #self.db.users.find({'username': self.current_user}, limit=1, callback=self._on_response)
+        self.db[collection].find_one({"_id": document}callback=self._on_response)
         # or
         # conn = self.db.connection(collectionname="...", dbname="...")
         # conn.find(..., callback=self._on_response)
-        self._on_response({"collection": collection, "document": document}, None)
+        #self._on_response({"collection": collection, "document": document}, None)
 
     def _on_response(self, response, error):
         if error:
