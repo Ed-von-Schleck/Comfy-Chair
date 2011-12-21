@@ -15,7 +15,7 @@ class MainRestHandler(tornado.web.RequestHandler):
 
     @tornado.web.asynchronous
     def get(self, collection, document):
-        self.db[collection].find_one({"_id": document}callback=self._on_response)
+        self.db[collection].find_one({"_id": document}, callback=self._on_response)
         # or
         # conn = self.db.connection(collectionname="...", dbname="...")
         # conn.find(..., callback=self._on_response)
@@ -24,6 +24,6 @@ class MainRestHandler(tornado.web.RequestHandler):
     def _on_response(self, response, error):
         if error:
             raise tornado.web.HTTPError(500)
-        self.write(response)
+        self.write(str(response))
         #self.render('template', full_name=response['full_name'])
         self.finish()
